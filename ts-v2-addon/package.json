@@ -43,10 +43,10 @@
     "lint:js:fix": "eslint . --fix",
     "lint:types": "glint",
     "prepack": "rollup --config",
+    "prettier": "prettier --write \"**/*.{gjs,gts,hbs,js,json,ts}\"",
     "start": "concurrently 'npm:start:*'",
     "start:js": "rollup --config --watch --no-watch.clearScreen",
-    "start:types": "glint --declaration --watch",
-    "test": "echo 'A v2 addon does not have tests, run tests in test-app'"
+    "start:types": "glint --declaration --watch"
   },
   "dependencies": {
     "@embroider/addon-shim": "^1.0.0"

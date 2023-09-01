@@ -21,6 +21,7 @@
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
     "lint:types": "tsc --noEmit",
+    "prettier": "prettier --write \"**/*.{gjs,gts,hbs,js,json,ts}\"",
     "start": "ember serve",
     "test": "concurrently \"npm:lint\" \"npm:test:*\" --names \"lint,test:\"",
     "test:ember": "ember test"
