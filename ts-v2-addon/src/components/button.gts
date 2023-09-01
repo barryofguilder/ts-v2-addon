@@ -21,7 +21,12 @@ export default class Button extends Component<ButtonSignature> {
   }
 
   <template>
-    <button data-test-id='button' type={{this.type}} ...attributes>
+    <button
+      data-test-id='button'
+      type={{this.type}}
+      class='px-4 py-1 border rounded hover:bg-red-500'
+      ...attributes
+    >
       {{yield}}
     </button>
   </template>
