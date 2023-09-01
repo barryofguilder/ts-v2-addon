@@ -3,9 +3,11 @@
 <div class="p-12">
   <h2 id="title">Welcome to Ember</h2>
 
-  <Button @type="submit">
-    My Button!
-  </Button>
+  <Form @onSubmit={{this.handleSubmit}} as |form|>
+    <form.Submit>
+      My Submit Button!
+    </form.Submit>
+  </Form>
 
   {{outlet}}
 </div>

@@ -113,7 +113,8 @@
     "type": "addon",
     "main": "addon-main.cjs",
     "app-js": {
-      "./components/button.js": "./dist/_app_/components/button.js"
+      "./components/button.js": "./dist/_app_/components/button.js",
+      "./components/form.js": "./dist/_app_/components/form.js"
     }
   }
 }
