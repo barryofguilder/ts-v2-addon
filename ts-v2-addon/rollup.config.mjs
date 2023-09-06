@@ -1,11 +1,14 @@
 import { babel } from '@rollup/plugin-babel';
 import copy from 'rollup-plugin-copy';
 import { Addon } from '@embroider/addon-dev/rollup';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 const addon = new Addon({
   srcDir: 'src',
   destDir: 'dist',
 });
+
+const extensions = ['.js', '.gjs', '.ts', '.gts'];
 
 export default {
   // This provides defaults that work well alongside `publicEntrypoints` below.
@@ -31,6 +34,8 @@ export default {
     // package names.
     addon.dependencies(),
 
+    nodeResolve({ extensions }),
+
     // This babel config should *not* apply presets or compile away ES modules.
     // It exists only to provide development niceties for you, like automatic
     // template colocation.
@@ -38,7 +43,7 @@ export default {
     // By default, this will load the actual babel config from the file
     // babel.config.json.
     babel({
-      extensions: ['.js', '.gjs', '.ts', '.gts'],
+      extensions,
       babelHelpers: 'bundled',
     }),
 
