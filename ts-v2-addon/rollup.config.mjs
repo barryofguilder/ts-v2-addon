@@ -2,6 +2,7 @@ import { babel } from '@rollup/plugin-babel';
 import copy from 'rollup-plugin-copy';
 import { Addon } from '@embroider/addon-dev/rollup';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import { glimmerTemplateTag } from 'rollup-plugin-glimmer-template-tag';
 
 const addon = new Addon({
   srcDir: 'src',
@@ -34,6 +35,8 @@ export default {
     // package names.
     addon.dependencies(),
 
+    glimmerTemplateTag(),
+
     nodeResolve({ extensions }),
 
     // This babel config should *not* apply presets or compile away ES modules.
@@ -50,8 +53,9 @@ export default {
     // Ensure that standalone .hbs files are properly integrated as Javascript.
     addon.hbs(),
 
+    // NOTE: Using `glimmerTemplateTag()`` instead.
     // Ensure that .gjs files are properly integrated as Javascript
-    addon.gjs(),
+    // addon.gjs(),
 
     // addons are allowed to contain imports of .css files, which we want rollup
     // to leave alone and keep in the published output.

@@ -6,6 +6,7 @@
     ]
   ],
   "plugins": [
+    "ember-template-imports/src/babel-plugin",
     "@embroider/addon-dev/template-colocation-plugin",
     "@babel/plugin-transform-class-static-block",
     [
