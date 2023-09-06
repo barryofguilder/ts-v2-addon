@@ -101,7 +101,13 @@
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
+    "@glint/template": "^1.0.2",
     "tailwindcss": "^3.3.3"
+  },
+  "peerDependenciesMeta": {
+    "@glint/template": {
+      "optional": true
+    }
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
