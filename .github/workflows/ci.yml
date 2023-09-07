@@ -65,6 +65,9 @@ jobs:
         run: |
           npm ci
 
+      - name: Build addon
+        run: npm run build
+
       - name: Lint
         run: npm run lint
 
@@ -94,6 +97,9 @@ jobs:
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: |
           npm ci
+
+      - name: Build addon
+        run: npm run build
 
       - name: Run Tests
         run: npm run test:ember
