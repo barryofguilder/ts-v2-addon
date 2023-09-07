@@ -120,6 +120,10 @@
       "optional": true
     }
   },
+  "packageManager": "pnpm@8.7.1",
+  "volta": {
+    "extends": "../package.json"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },

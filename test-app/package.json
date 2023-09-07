@@ -115,6 +115,10 @@
     "typescript": "^5.1.6",
     "webpack": "^5.88.2"
   },
+  "packageManager": "pnpm@8.7.1",
+  "volta": {
+    "extends": "../package.json"
+  },
   "engines": {
     "node": "16.* || >= 18"
   },
