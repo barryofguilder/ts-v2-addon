@@ -21,6 +21,7 @@ export default {
     // addon. Anything not listed here may get optimized away.
     addon.publicEntrypoints([
       'components/**/*.js',
+      'test-support/**/*.js',
       'index.js',
       'template-registry.js',
     ]),

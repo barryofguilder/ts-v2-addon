@@ -17,6 +17,10 @@
       "types": "./declarations/*.d.ts",
       "default": "./dist/*.js"
     },
+    "./test-support": {
+      "types": "./declarations/test-support/index.d.ts",
+      "default": "./dist/test-support/index.js"
+    },
     "./addon-main.js": "./addon-main.cjs"
   },
   "typesVersions": {
